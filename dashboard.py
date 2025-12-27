@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 
-# --- AYARLAR & TASARIM (Hacker Teması - Sadece Emoji Logolu) ---
+# --- AYARLAR & TASARIM (Hacker Teması - KOCAMAN EMOJİ LOGOLU) ---
 st.set_page_config(page_title="MirZ Scanner", layout="wide", page_icon="🐰")
 
 st.markdown("""
@@ -36,10 +36,6 @@ st.markdown("""
     
     /* Radyo Butonları */
     .stRadio > div { color: #00ff41; background-color: #111; padding: 10px; border: 1px solid #333; }
-    
-    /* LOGO ALANI (Sadece Emoji) */
-    .logo-box { text-align: center; padding: 20px; border-bottom: 2px dashed #00ff41; margin-bottom: 20px; }
-    .emoji-logo { font-size: 80px; margin: 0; letter-spacing: -10px; } /* Emojileri büyüttüm ve yaklaştırdım */
 </style>
 """, unsafe_allow_html=True)
 
@@ -103,10 +99,11 @@ def get_list():
     raw = "THYAO, GARAN, AKBNK, ISCTR, YKBNK, VAKBN, HALKB, TSKB, SKBNK, ALBRK, SAHOL, KCHOL, SISE, EREGL, KRDMD, TUPRS, PETKM, ASELS, TCELL, TTKOM, BIMAS, MGROS, SOKM, AEFES, CCOLA, FROTO, TOASO, TTRAK, OTKAR, DOAS, ARCLK, VESTL, ENKAI, TEKFEN, PGSUS, TAVHL, GUBRF, HEKTS, KOZAL, KOZAA, IPEKE, OYAKC, CIMSA, AKCNS, EKGYO, ISGYO, TRGYO, SNGYO, ALARK, ODAS, ZOREN, AKSA, AKSEN, AYDEM, GWIND, SMRTG, KONTR, EUPWR, GESAN, ASTOR, ALFA, CWENE, MIATK, SDTTR, YEOTK, KMPUR, BRSAN, TUKAS, ULKER, TATGD, LOGO, INDES, SELEC, ECILC, GENIL, TRILC, TURSG, ANHYT, MAVI, YATAS, KORDS, SARTKY, KLKIM, CEMTS, GOODY, BRISA, JANTS, KCAER, QUAGR, BERA, KONKA, KARTN, BFREN, EGEEN"
     return [f"{h.strip()}.IS" for h in raw.split(',')]
 
-# --- ARAYÜZ (Yan Menü - Sadece Emoji) ---
+# --- ARAYÜZ (Yan Menü - DEV EMOJİ) ---
 with st.sidebar:
-    # MirZ yazısı kaldırıldı, sadece emojiler kaldı
-    st.markdown("<div class='logo-box'><p class='emoji-logo'>🐰🐥</p></div>", unsafe_allow_html=True)
+    # BURASI YENİLENDİ: 120px boyutunda dev emoji
+    st.markdown("<h1 style='text-align: center; font-size: 120px !important; margin-top: -20px; margin-bottom: 20px;'>🐰🐥</h1>", unsafe_allow_html=True)
+    
     st.write("")
     st.header("STRATEJİ SEÇ:")
     mod = st.radio("", ["🎯 DİP AVCISI (RSI < 30)", "🏆 GOLDEN CROSS (50 > 200)", "🚀 KIRILIM (Trend Start)", "🐂 MOMENTUM (Güçlü)"])
